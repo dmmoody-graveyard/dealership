@@ -18,6 +18,13 @@ describe(Vehicle) do
     end
   end
 
+  describe('#year') do
+    it('returns year of vehicle') do
+      test_vehicle = Vehicle.new("Toyota", "Prius", 2015)
+      expect(test_vehicle.year()).to(eq(2015))
+    end
+  end
+
   describe('#clear') do
     it('clears the list of vehicles') do
       test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
