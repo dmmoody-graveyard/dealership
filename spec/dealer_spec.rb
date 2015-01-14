@@ -3,6 +3,13 @@ require('dealer')
 
 describe(Vehicle) do
 
+  describe('#save') do
+    it('saves the make, model, and year of a vehicle') do
+      test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
+      expect(test_vehicle.save()).to(eq([test_vehicle]))
+    end
+  end
+
   describe('#make') do
     it('returns make of vehicle') do
       test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
