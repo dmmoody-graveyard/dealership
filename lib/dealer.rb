@@ -19,6 +19,10 @@
       @model
     end
 
+    define_method(:year) do
+      @year
+    end
+
     define_method(:clear) do
       @@vehicle = []
     end
