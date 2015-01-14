@@ -30,4 +30,5 @@
     define_singleton_method(:all) do
       @@vehicle
     end
+    
 end
