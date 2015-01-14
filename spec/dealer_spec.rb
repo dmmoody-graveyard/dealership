@@ -60,10 +60,10 @@ describe(Vehicle) do
   end
 
   describe('#worth_buying?') do
-    it('determines if the car is worth buying') do
-      test_vehicle = Vehicle.new("Toyota", "Prius", 1985)
+    it('determines if the car is worth buying within desired makes and age') do
+      test_vehicle = Vehicle.new("Toyota", "Prius", 2010)
       test_vehicle.save()
-      expect(test_vehicle.worth_buying?()).to(eq(false))
+      expect(test_vehicle.worth_buying?(["Toyota", "Ford"], 10)).to(eq(true))
     end
   end
 end

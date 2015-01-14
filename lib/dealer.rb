@@ -35,4 +35,12 @@
       current_year = Time.new()
       vehicle_age = current_year.year().-(@year)
     end
+
+    define_method(:worth_buying?) do |desired_cars, desired_age|
+      @desired_cars = desired_cars
+      @desired_age = desired_age
+      if @desired_cars.include?(@make).&(self.age <= @desired_age)
+        true
+      end
+    end
 end
