@@ -30,5 +30,9 @@
     define_singleton_method(:all) do
       @@vehicle
     end
-    
+
+    define_method(:age) do
+      current_year = Time.new()
+      vehicle_age = current_year.year().-(@year)
+    end
 end
