@@ -11,6 +11,13 @@ describe(Vehicle) do
     end
   end
 
+  describe('#model') do
+    it('returns model of vehicle') do
+      test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
+      expect(text_vehicle.model()).to(eq("Prius"))
+    end
+  end
+
   describe('#clear') do
     it('clears the list of vehicles') do
       test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
