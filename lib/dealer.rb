@@ -15,6 +15,10 @@
       @make
     end
 
+    define_method(:model) do
+      @model
+    end
+
     define_method(:clear) do
       @@vehicle = []
     end

@@ -14,7 +14,7 @@ describe(Vehicle) do
   describe('#model') do
     it('returns model of vehicle') do
       test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
-      expect(text_vehicle.model()).to(eq("Prius"))
+      expect(test_vehicle.model()).to(eq("Prius"))
     end
   end
 
