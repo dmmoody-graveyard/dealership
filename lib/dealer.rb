@@ -5,7 +5,7 @@
       @make = make
       @model = model
       @year = year
-      @auto_id = @@vehicle.length()
+      @id = @@vehicle.length()
     end
 
     define_method(:save) do
@@ -43,5 +43,15 @@
       if @desired_cars.include?(@make).&(self.age <= @desired_age)
         true
       end
+    end
+
+    define_singleton_method(:find) do |identifaction|
+      found_vehicle = nil
+      @@vehicle.each() do |vehicle|
+        if vehicle.id().eql?(identification.to_i())
+          found_vehicle = vehicle
+        end
+      end
+      found_vehicle
     end
 end
