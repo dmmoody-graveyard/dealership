@@ -26,4 +26,8 @@
     define_singleton_method(:clear) do
       @@vehicle = []
     end
+
+    define_singleton_method(:all) do
+      @@vehicle
+    end
 end
