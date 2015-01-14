@@ -5,6 +5,7 @@
       @make = make
       @model = model
       @year = year
+      @auto_id = @@vehicle.length()
     end
 
     define_method(:save) do
