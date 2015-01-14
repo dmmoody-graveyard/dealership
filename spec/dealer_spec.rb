@@ -2,6 +2,9 @@ require('rspec')
 require('dealer')
 
 describe(Vehicle) do
+  before() do
+    Vehicle.clear()
+  end
 
   describe('#save') do
     it('saves the make, model, and year of a vehicle') do
@@ -36,7 +39,7 @@ describe(Vehicle) do
     it('clears the list of vehicles') do
       test_vehicle = Vehicle.new("Toyota", "Prius", "2015")
       test_vehicle.save()
-      expect(test_vehicle.clear()).to(eq([]))
+      expect(Vehicle.clear()).to(eq([]))
     end
   end
 end

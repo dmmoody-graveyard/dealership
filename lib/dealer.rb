@@ -23,7 +23,7 @@
       @year
     end
 
-    define_method(:clear) do
+    define_singleton_method(:clear) do
       @@vehicle = []
     end
 end
