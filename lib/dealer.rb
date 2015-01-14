@@ -14,4 +14,8 @@
     define_method(:make) do
       @make
     end
+
+    define_method(:clear) do
+      @@vehicle = []
+    end
 end
